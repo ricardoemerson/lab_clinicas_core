@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:lab_clinicas_core/lab_clinicas_core.dart';
+import 'package:lab_clinicas_core/src/theme/app_theme.dart';
 
 class LabClinicasCoreConfig extends StatelessWidget {
   final ApplicationBindings? bindings;
@@ -33,6 +34,9 @@ class LabClinicasCoreConfig extends StatelessWidget {
           builder: (navigatorObserver) {
             return MaterialApp(
               title: title,
+              theme: AppTheme.lightTheme,
+              darkTheme: AppTheme.darkTheme,
+              debugShowCheckedModeBanner: false,
               navigatorObservers: [navigatorObserver, flutterGetItNavObserver],
               routes: routes,
             );
