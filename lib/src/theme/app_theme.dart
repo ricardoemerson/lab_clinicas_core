@@ -51,6 +51,9 @@ final class AppTheme {
       errorBorder: _defaultBorder.copyWith(
         borderSide: const BorderSide(color: Colors.red),
       ),
+      focusedErrorBorder: _defaultBorder.copyWith(
+        borderSide: const BorderSide(color: Colors.red),
+      ),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(

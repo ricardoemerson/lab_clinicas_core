@@ -2,8 +2,8 @@ import 'package:asyncstate/asyncstate.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_getit/flutter_getit.dart';
-import 'package:lab_clinicas_core/lab_clinicas_core.dart';
-import 'package:lab_clinicas_core/src/theme/app_theme.dart';
+
+import '../lab_clinicas_core.dart';
 
 class LabClinicasCoreConfig extends StatelessWidget {
   final ApplicationBindings? bindings;
@@ -13,13 +13,13 @@ class LabClinicasCoreConfig extends StatelessWidget {
   final String title;
 
   const LabClinicasCoreConfig({
-    Key? key,
+    super.key,
     this.bindings,
     this.pages,
     this.pagesBuilders,
     this.modules,
     required this.title,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

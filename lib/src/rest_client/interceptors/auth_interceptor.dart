@@ -1,10 +1,14 @@
 import 'package:dio/dio.dart';
-import 'package:lab_clinicas_core/src/constants/local_storage_constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../constants/local_storage_constants.dart';
 
 final class AuthInterceptor extends Interceptor {
   @override
-  Future<void> onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
+  Future<void> onRequest(
+    RequestOptions options,
+    RequestInterceptorHandler handler,
+  ) async {
     final RequestOptions(:headers, :extra) = options;
 
     const authHeaderKey = 'Authorization';
@@ -15,7 +19,8 @@ final class AuthInterceptor extends Interceptor {
 
       headers.addAll(
         {
-          authHeaderKey: 'Bearer ${sp.getString(LocalStorageConstants.accessToken)}',
+          authHeaderKey:
+              'Bearer ${sp.getString(LocalStorageConstants.accessToken)}',
         },
       );
     }

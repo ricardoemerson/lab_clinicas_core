@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
-import 'package:lab_clinicas_core/src/rest_client/interceptors/auth_interceptor.dart';
+
+import 'interceptors/auth_interceptor.dart';
 
 final class RestClient extends DioForNative {
   RestClient(String baseUrl)
