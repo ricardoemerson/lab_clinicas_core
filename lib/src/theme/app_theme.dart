@@ -67,6 +67,7 @@ final class AppTheme {
           fontSize: 14,
           fontWeight: FontWeight.w700,
         ),
+        fixedSize: const Size.fromHeight(48),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
@@ -82,6 +83,7 @@ final class AppTheme {
           fontSize: 14,
           fontWeight: FontWeight.w700,
         ),
+        fixedSize: const Size.fromHeight(48),
       ),
     ),
   );
