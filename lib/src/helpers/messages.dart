@@ -32,11 +32,15 @@ mixin MessageStateMixin {
   final _errorMessage = signal<String?>(null);
 
   String? get infoMessage => _infoMessage();
+
   String? get successMessage => _successMessage();
+
   String? get errorMessage => _errorMessage();
 
   void clearInfo() => _infoMessage.value = null;
+
   void clearSuccess() => _successMessage.value = null;
+
   void clearError() => _errorMessage.value = null;
 
   void clearAllMessages() {
@@ -81,4 +85,10 @@ mixin MessageViewMixin<T extends StatefulWidget> on State<T> {
       }
     });
   }
+
+  void showInfo(String message) => Messages.showInfo(message, context);
+
+  void showSuccess(String message) => Messages.showSuccess(message, context);
+
+  void showError(String message) => Messages.showError(message, context);
 }
